@@ -54,18 +54,18 @@ class _HomeState extends State<Home> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(bottom: 10.0),
+                  padding: EdgeInsets.only(bottom: 30.0),
                   child: Text(
                     "Akure, Nigeria",
                     style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.w800),
                   ),
                 ),
                 Text(
-                  temp != null ? temp.toString() + "\0B00" : "Loading",
+                  temp != null ? temp.toString() + "°C" : "Loading",
                   style: TextStyle(color: Colors.pink, fontSize: 16.0, fontWeight: FontWeight.w800),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 10.0),
+                  padding: EdgeInsets.only(top: 30.0),
                   child: Text(
                     location != null ? location.toString() : "Loading",
                     style: TextStyle(color: Colors.white, fontSize: 14.0, fontWeight: FontWeight.w800),
@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
                   ListTile(
                     leading: FaIcon(FontAwesomeIcons.thermometerHalf),
                     title: Text("Temperature"),
-                    trailing: Text(temp != null ? temp.toString() + "\0B00" : "Loading"),
+                    trailing: Text(temp != null ? temp.toString() + "°C" : "Loading"),
                   ),
                   ListTile(leading: FaIcon(FontAwesomeIcons.cloud), title: Text("Weather"), trailing: Text(description != null ? description.toString() : "Loading")),
                   ListTile(leading: FaIcon(FontAwesomeIcons.wind), title: Text("Humidity"), trailing: Text(humidity != null ? humidity.toString() : "Loading")),
